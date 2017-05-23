@@ -23,10 +23,17 @@ PRODUCT_PACKAGES += \
     OmsBackend
 
 PRODUCT_PACKAGES += \
-    SlimFileManager \
-    Music \
+    SnapdragonMusic \
+    SnapdragonGallery \
     Mms \
     rcs_service_aidl \
     rcs_service_aidl.xml \
     rcs_service_api \
     rcs_service_api.xml
+
+PRODUCT_COPY_FILES += \
+    vendor/extra/prebuilt/65theme:system/etc/init.d/65theme
+
+ifneq ($(TARGET_ARCH),)
+$(call inherit-product-if-exists, vendor/gapps/$(TARGET_ARCH)/$(TARGET_ARCH)-vendor.mk)
+endif
