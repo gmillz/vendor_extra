@@ -1,1 +1,1 @@
-BOARD_SEPOLICY_DIRS += vendor/extra/sepolicy
+#BOARD_SEPOLICY_DIRS += vendor/extra/sepolicy
